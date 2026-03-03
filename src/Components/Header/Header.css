@@ -1,0 +1,245 @@
+.mid-header {
+    background: #fff;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.mid-header a {
+    font-size: 16px;
+    /* riêng link */
+    font-weight: 600;
+    /* đậm hơn */
+}
+
+.mid-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-right .cart-link {
+    font-size: 16px;
+}
+
+.mid-header {
+    background: #fff;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.mid-header a {
+    font-size: 16px;
+    /* riêng link */
+    font-weight: 600;
+    /* đậm hơn */
+}
+
+.mid-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-right .cart-link {
+    font-size: 16px;
+}
+
+.search-bar input {
+    font-size: 15px;
+}
+
+
+/* Search */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.search-bar input {
+    border: 0;
+    outline: 0;
+    padding: 8px 15px;
+    font-size: 14px;
+    flex: 1;
+}
+
+.search-bar button {
+    background: #333;
+    color: #fff;
+    border: 0;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #555;
+}
+
+
+/* Logo */
+
+.header-center .logo img {
+    max-height: 50px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Cart */
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cart-link i {
+    font-size: 18px;
+}
+
+.cart-link:hover {
+    color: #007bff;
+}
+
+
+/* =========================
+   MAIN NAV (MENU NGANG)
+   ========================= */
+
+.main-nav {
+    background: #fff;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.main-nav a:hover {
+    color: #007bff;
+}
+
+
+/* Nav bar */
+
+.main-nav {
+    background: #fff;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.main-nav a:hover {
+    color: #007bff;
+}
+
+
+/* Submenu */
+
+.main-nav .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+.main-nav .submenu li {
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.main-nav .submenu li:last-child {
+    border-bottom: none;
+}
+
+.main-nav .submenu a {
+    padding: 10px 15px;
+    font-weight: 400;
+    color: #333;
+}
+
+.main-nav .submenu a:hover {
+    background: #f7f7f7;
+    color: #007bff;
+}
+
+.main-nav .has-submenu:hover .submenu {
+    display: block;
+}
+
+
+/* Tablet 768–991px: chia 2 cột/row */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .widget-ft,
+    .wg-logo {
+        flex: 1 1 calc(50% - 16px);
+        min-width: 260px;
+    }
+}
