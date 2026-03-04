@@ -80,8 +80,8 @@
  
  .btn-loadmore:hover {
      box-shadow: 0 12px 28px rgba(17, 24, 39, 0.16);
-     background: #fff;
-     color: #000;
+     background: black;
+     color: #ffff;
      border: 1px solid #111;
  }
  /* Hiệu ứng khi click */

@@ -1,0 +1,41 @@
+ .bread-crumb {
+     padding: 10px 0;
+     border-bottom: 1px solid #eee;
+     background: transparent;
+ }
+ 
+ .breadcrumb {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     gap: 8px;
+     font-size: 14px;
+ }
+ 
+ .breadcrumb li {
+     display: flex;
+     align-items: center;
+     color: #666;
+ }
+ 
+ .breadcrumb li.home a {
+     font-weight: 600;
+     color: #333;
+ }
+ 
+ .breadcrumb .mr_lr i {
+     color: #999;
+ }
+ 
+ @media (max-width: 576px) {
+     .breadcrumb {
+         font-size: 13px;
+     }
+     .page {
+         padding: 16px 0 28px;
+     }
+     .page-title .title-head {
+         font-size: 20px;
+     }
+ }

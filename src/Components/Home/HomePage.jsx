@@ -4,7 +4,7 @@ import Topbar from "./Topbar/Topbar"
 import PolicyBox from "./Policy/PolicyBox"
 import HeroSection from "./Hero-slider/Hero"
 import Banner from "./ThreeBanner/Banner"
-import MoreButton from "../More/MoreButton"
+import MoreButton from "./More/MoreButton"
 export default function HomePage() {
     return (
         <>

@@ -1,0 +1,49 @@
+   .page {
+       padding: 22px 0 36px;
+   }
+   
+   .page-title .title-head,
+   .page-title h1 {
+       font-size: 35px;
+       margin: 0 0 12px;
+   }
+   
+   .content-page.rte p {
+       margin: 10px 0;
+       text-align: justify;
+       font-size: 15px;
+       color: #333;
+   }
+   
+   .content-page.rte p strong {
+       display: block;
+       font-size: 15.5px;
+       text-transform: uppercase;
+       color: #111;
+   }
+   /* =========================
+       RESPONSIVE
+       ========================= */
+   
+   @media (max-width: 767.98px) {
+       .search-bar {
+           display: none !important;
+       }
+       .mid-header .header-main {
+           display: grid;
+           grid-template-columns: auto 1fr auto;
+           gap: 8px;
+           align-items: center;
+       }
+       .header-center .logo img {
+           max-height: 40px;
+       }
+       .cart-link {
+           font-size: 13px;
+       }
+       .btn-logout {
+           padding: 5px 8px !important;
+           font-size: 11px !important;
+           max-width: 70px !important;
+       }
+   }
