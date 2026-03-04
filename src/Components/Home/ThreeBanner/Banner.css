@@ -1,0 +1,62 @@
+.awe-section-3 {
+    padding: 20px 0;
+    background: #fff;
+}
+
+
+/* Thêm định nghĩa container để khung banner được căn giữa màn hình */
+
+.awe-section-3 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.adv-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.adv_bottom_inner {
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    overflow: hidden;
+    /* Giữ cho ảnh không bị tràn ra khỏi góc bo tròn */
+}
+
+
+/* Khử khoảng trống thừa của thẻ figure */
+
+.adv_bottom_inner figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Ép ảnh vừa vặn 100% với cột Grid */
+
+.adv_bottom_inner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Xóa khoảng trống nhỏ dưới đáy ảnh */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.adv_bottom_inner a:hover img {
+    transform: translateY(-4px);
+    /* Tăng hiệu ứng hover lên một chút cho rõ nét */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Thêm bóng đổ nhẹ khi hover */
+}
+
+
+/* Responsive: Chuyển thành 1 cột xếp dọc khi xem trên điện thoại */
+
+@media (max-width: 768px) {
+    .adv-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}

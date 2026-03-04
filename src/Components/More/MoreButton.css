@@ -1,0 +1,107 @@
+ .btn-loadmore .lm-text {
+     font-weight: 800;
+     font-size: 15px;
+     letter-spacing: 0.02em;
+     text-transform: uppercase;
+ }
+ 
+ .btn-loadmore .lm-sub {
+     font-size: 12px;
+     opacity: 0.75;
+ }
+ 
+ .btn-loadmore:hover {
+     box-shadow: 0 12px 28px rgba(17, 24, 39, 0.16);
+     background: #fff;
+     color: #000;
+     border: 1px solid #111;
+ }
+ 
+ .btn-loadmore:active {
+     transform: translateY(0);
+     box-shadow: 0 6px 16px rgba(17, 24, 39, 0.12);
+ }
+ /* Trạng thái hết dữ liệu */
+ 
+ .btn-loadmore.is-done {
+     background: #f3f4f6;
+     color: #6b7280;
+     border-color: #e5e7eb;
+     box-shadow: none;
+     cursor: default;
+     pointer-events: none;
+ }
+ 
+ .btn-loadmore.is-done .lm-sub {
+     opacity: 0.9;
+ }
+ 
+ .btn-loadmore {
+     text-decoration: none;
+     text-align: center;
+ }
+ /* Căn giữa nút Xem thêm và tạo khoảng cách với phần lưới sản phẩm */
+ 
+ .loadmore-wrap {
+     text-align: center;
+     margin-top: 30px;
+     padding-bottom: 20px;
+ }
+ /* Định dạng cơ bản cho nút */
+ 
+ .btn-loadmore {
+     display: inline-block;
+     padding: 12px 32px;
+     background: #f8f8f8;
+     color: #333;
+     border: 1px solid #e5e5e5;
+     border-radius: 4px;
+     /* Bo góc nhẹ */
+     text-decoration: none;
+     transition: all 0.3s ease;
+     cursor: pointer;
+ }
+ 
+ .btn-loadmore .lm-text {
+     font-weight: 800;
+     font-size: 15px;
+     letter-spacing: 0.02em;
+     text-transform: uppercase;
+ }
+ 
+ .btn-loadmore .lm-sub {
+     font-size: 12px;
+     opacity: 0.75;
+     display: block;
+     /* Nếu có sub-text thì cho xuống dòng */
+     margin-top: 4px;
+ }
+ /* Hiệu ứng khi di chuột vào */
+ 
+ .btn-loadmore:hover {
+     box-shadow: 0 12px 28px rgba(17, 24, 39, 0.16);
+     background: #fff;
+     color: #000;
+     border: 1px solid #111;
+ }
+ /* Hiệu ứng khi click */
+ 
+ .btn-loadmore:active {
+     transform: translateY(2px);
+     /* Nút lún xuống một chút tạo cảm giác bấm */
+     box-shadow: 0 6px 16px rgba(17, 24, 39, 0.12);
+ }
+ /* Trạng thái hết dữ liệu (disable) */
+ 
+ .btn-loadmore.is-done {
+     background: #f3f4f6;
+     color: #6b7280;
+     border-color: #e5e7eb;
+     box-shadow: none;
+     cursor: not-allowed;
+     pointer-events: none;
+ }
+ 
+ .btn-loadmore.is-done .lm-sub {
+     opacity: 0.9;
+ }
