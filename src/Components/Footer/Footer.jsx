@@ -1,11 +1,11 @@
 import "./Footer.css";
-import payment1 from "../../assets/images/Payment/pay_1.webp";
-import payment2 from "../../assets/images/Payment/pay_2.webp";
-import payment3 from "../../assets/images/Payment/pay_3.webp";
-import payment4 from "../../assets/images/Payment/pay_4.webp";
-import payment5 from "../../assets/images/Payment/pay_5.webp";
-import payment6 from "../../assets/images/Payment/pay_6.webp";
-import payment7 from "../../assets/images/Payment/pay_7.webp";
+import payment1 from "../../assets/images/Payments/pay_1.webp";
+import payment2 from "../../assets/images/Payments/pay_2.webp";
+import payment3 from "../../assets/images/Payments/pay_3.webp";
+import payment4 from "../../assets/images/Payments/pay_4.webp";
+import payment5 from "../../assets/images/Payments/pay_5.webp";
+import payment6 from "../../assets/images/Payments/pay_6.webp";
+import payment7 from "../../assets/images/Payments/pay_7.webp";
 
 export default function Footer() {
     const FOOTER_LINKS = [

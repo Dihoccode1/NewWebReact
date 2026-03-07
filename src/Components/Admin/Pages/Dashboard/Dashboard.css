@@ -1,0 +1,246 @@
+/* src/Components/Admin/Pages/Dashboard/Dashboard.css */
+
+.admin-app .dashboard-page {
+    padding: 8px 8px 24px;
+}
+
+.admin-app .dashboard-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.admin-app .dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #111827;
+}
+
+.admin-app .dashboard-header .sub {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+
+/* Nút bấm */
+
+.admin-app .dashboard-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.admin-app .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform var(--speed);
+    font-size: 12px;
+    outline: none;
+    color: var(--text);
+}
+
+.admin-app .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.admin-app .btn.primary {
+    background: var(--brand);
+    color: #fff;
+    border-color: var(--brand);
+}
+
+
+/* Khối Thống kê */
+
+.admin-app .cardBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.admin-app .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    padding: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-app .card .numbers {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.2;
+}
+
+.admin-app .card .cardName {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.admin-app .card .iconBx {
+    font-size: 28px;
+    color: var(--brand);
+    opacity: 0.85;
+}
+
+
+/* Khối Bảng - SỬA LỖI Ở ĐÂY */
+
+.admin-app .details {
+    display: grid;
+    /* Tăng tỷ lệ cột trái lên để bảng đơn hàng rộng hơn, cột khách hàng hẹp lại một chút */
+    grid-template-columns: 2.3fr 1fr;
+    gap: 18px;
+}
+
+.admin-app .recentOrders,
+.admin-app .recentCustomers {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    padding: 18px;
+    /* ĐÃ BỎ overflow-x: auto ở màn hình lớn để không bị hiện thanh kéo */
+}
+
+.admin-app .cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--soft-line);
+    margin-bottom: 8px;
+}
+
+.admin-app .cardHeader h2 {
+    font-size: 16px;
+    margin: 0;
+    color: #111827;
+}
+
+
+/* CSS cho Table */
+
+.admin-app table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-app thead td {
+    font-weight: 800;
+    color: #111;
+    border-bottom: 1px solid var(--line);
+    padding: 12px 8px;
+    white-space: nowrap;
+}
+
+.admin-app tbody td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #f0f2f5;
+    vertical-align: middle;
+}
+
+.admin-app tbody tr:hover td {
+    background: #fafafa;
+}
+
+
+/* Trạng thái */
+
+.admin-app .status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    border: 1px solid var(--line);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.admin-app .status.delivered {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+    color: #065f46;
+}
+
+.admin-app .status.returned {
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+    color: #334155;
+}
+
+.admin-app .status.inPending {
+    background: #fff7ed;
+    border-color: #fed7aa;
+    color: #9a3412;
+}
+
+.admin-app .status.inProgress {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+    color: #3730a3;
+}
+
+
+/* Avatar Khách hàng */
+
+.admin-app .recentCustomers .imgBx {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.admin-app .recentCustomers .imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.admin-app .recentCustomers h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #111;
+    line-height: 1.4;
+}
+
+.admin-app .recentCustomers h4 span {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: normal;
+}
+
+
+/* Responsive - CHỈ HIỆN THANH KÉO TRÊN ĐIỆN THOẠI/TABLET */
+
+@media (max-width: 1024px) {
+    .admin-app .details {
+        grid-template-columns: 1fr;
+    }
+    .admin-app .recentOrders,
+    .admin-app .recentCustomers {
+        overflow-x: auto;
+    }
+    .admin-app table {
+        min-width: 600px;
+    }
+}

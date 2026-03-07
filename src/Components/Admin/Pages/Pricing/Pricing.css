@@ -1,0 +1,86 @@
+/* src/Components/Admin/Pages/Pricing/Pricing.css */
+
+.admin-app .page {
+    padding: 14px 16px;
+}
+
+.admin-app .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 12px;
+}
+
+.admin-app .page-header h1 {
+    font-size: 30px;
+    margin: 0;
+    color: var(--text);
+}
+
+.admin-app .toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+
+.admin-app .table-wrap {
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--line);
+}
+
+.admin-app table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    min-width: 900px;
+}
+
+.admin-app thead td {
+    background: #f8fafc;
+    font-weight: 800;
+    color: #111;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 16px;
+    white-space: nowrap;
+}
+
+.admin-app tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--soft-line);
+    vertical-align: middle;
+}
+
+.admin-app tbody tr:hover {
+    background: #fafafa;
+}
+
+.admin-app .num {
+    text-align: right;
+}
+
+.admin-app .status-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    border: 1px solid var(--line);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.admin-app .status-chip.selling {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+    color: #065f46;
+}
+
+.admin-app .status-chip.stopped {
+    background: #fff7ed;
+    border-color: #fed7aa;
+    color: #9a3412;
+}

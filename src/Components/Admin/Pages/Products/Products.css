@@ -1,0 +1,203 @@
+/* src/Components/Admin/Pages/Products/Products.css */
+
+.admin-app .page {
+    padding: 14px 16px;
+}
+
+.admin-app .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 12px;
+}
+
+.admin-app .page-header h1 {
+    font-size: 30px;
+    margin: 0;
+    color: var(--text);
+}
+
+.admin-app .actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.admin-app .toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+
+
+/* Bảng */
+
+.admin-app .table-wrap {
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--line);
+}
+
+.admin-app table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    min-width: 1100px;
+}
+
+.admin-app thead td {
+    background: #f8fafc;
+    font-weight: 800;
+    color: #111;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 16px;
+    white-space: nowrap;
+}
+
+.admin-app tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--soft-line);
+    vertical-align: middle;
+}
+
+.admin-app tbody tr:hover {
+    background: #fafafa;
+}
+
+.admin-app .num {
+    text-align: right;
+}
+
+.admin-app .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid var(--line);
+}
+
+
+/* Trạng thái */
+
+.admin-app .status-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    border: 1px solid var(--line);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.admin-app .status-chip.selling {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+    color: #065f46;
+}
+
+.admin-app .status-chip.stopped {
+    background: #fff7ed;
+    border-color: #fed7aa;
+    color: #9a3412;
+}
+
+.admin-app .status-chip.hidden {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+    color: #3730a3;
+}
+
+
+/* =========================================
+   DRAWER THÊM/SỬA SẢN PHẨM
+   ========================================= */
+
+.admin-app .drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    visibility: hidden;
+    opacity: 0;
+    transition: all var(--speed);
+    z-index: 998;
+    backdrop-filter: blur(2px);
+}
+
+.admin-app .drawer-backdrop.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.admin-app .drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: min(440px, 92vw);
+    background: #fff;
+    border-left: 1px solid var(--line);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -24px 0 60px rgba(0, 0, 0, 0.08);
+}
+
+.admin-app .drawer.open {
+    transform: translateX(0);
+}
+
+.admin-app .drawer .cardHeader {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--soft-line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.admin-app .drawer .drawer-body {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.admin-app .close-x {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: 800;
+    color: var(--text);
+    transition: 0.2s;
+}
+
+.admin-app .close-x:hover {
+    background: #fee2e2;
+    color: #ef4444;
+    border-color: #fecaca;
+}
+
+.admin-app .form-col label.small {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 14px 0 6px;
+    display: block;
+    font-weight: 600;
+}
+
+.admin-app .help {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 4px 0 10px;
+}

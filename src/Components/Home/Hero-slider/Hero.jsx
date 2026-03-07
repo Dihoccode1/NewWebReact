@@ -1,5 +1,5 @@
 import "./Hero.css"
-import HeroURL from "../../../assets/images/heroSection.jpg"
+import HeroURL from "../../../assets/images/banner/hero.jpg"
 export default function HeroSection() {
     return(
 <section className="awe-section-2">

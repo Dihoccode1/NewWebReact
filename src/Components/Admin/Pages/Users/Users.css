@@ -1,0 +1,127 @@
+/* src/Components/Admin/Pages/Users/Users.css */
+
+.admin-app .page {
+    padding: 14px 16px;
+}
+
+.admin-app .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 12px;
+}
+
+.admin-app .page-header h1 {
+    font-size: 30px;
+    margin: 0;
+    color: #111;
+}
+
+.admin-app .actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.admin-app .toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+
+.admin-app .input {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 9px 11px;
+    min-width: 220px;
+    background: #fff;
+    outline: none;
+    font-size: 13px;
+}
+
+.admin-app table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    font-size: 13px;
+    min-width: 800px;
+    box-shadow: var(--shadow-sm);
+}
+
+.admin-app thead td {
+    background: #f8fafc;
+    font-weight: 800;
+    color: #111;
+    border-bottom: 1px solid var(--line);
+    padding: 12px 10px;
+}
+
+.admin-app tbody td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--soft-line);
+    vertical-align: middle;
+}
+
+
+/* Modal */
+
+.admin-app .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    backdrop-filter: blur(2px);
+}
+
+.admin-app .modal.show {
+    display: flex;
+}
+
+.admin-app .card-modal {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    width: min(92vw, 720px);
+}
+
+.admin-app .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--soft-line);
+    font-size: 16px;
+}
+
+.admin-app .card-body {
+    padding: 16px;
+}
+
+.admin-app .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+@media (min-width: 720px) {
+    .admin-app .grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.admin-app label.small {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 4px;
+    display: block;
+    font-weight: 600;
+}

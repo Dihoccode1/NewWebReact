@@ -1,4 +1,4 @@
-import Banner1 from "../../../assets/images/Banner/banner1.webp";
+import Banner1 from "../../../assets/images/banner/banner4.webp";
 import Banner2 from "../../../assets/images/Banner/banner2.webp";
 import Banner3 from "../../../assets/images/Banner/banner3.webp";
 import "./Banner.css";

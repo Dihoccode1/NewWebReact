@@ -1,0 +1,217 @@
+/* src/Components/Admin/Pages/Imports/Imports.css */
+
+.admin-app .page {
+    padding: 14px 16px;
+}
+
+.admin-app .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 12px;
+}
+
+.admin-app .page-header h1 {
+    font-size: 30px;
+    margin: 0;
+    color: var(--text);
+}
+
+.admin-app .actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.admin-app .toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+
+.admin-app .input {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: #fff;
+    min-width: 180px;
+    outline: none;
+    font-family: inherit;
+}
+
+
+/* Bảng */
+
+.admin-app .table-wrap {
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--line);
+    margin-top: 16px;
+}
+
+.admin-app table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    min-width: 900px;
+}
+
+.admin-app thead td {
+    background: #f8fafc;
+    font-weight: 800;
+    color: #111;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 16px;
+    white-space: nowrap;
+}
+
+.admin-app tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--soft-line);
+    vertical-align: middle;
+}
+
+.admin-app tbody tr:hover {
+    background: #fafafa;
+}
+
+.admin-app .num {
+    text-align: right;
+}
+
+
+/* =========================================
+   DRAWER TẠO PHIẾU NHẬP
+   ========================================= */
+
+.admin-app .drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: all var(--speed);
+    z-index: 9998;
+    backdrop-filter: blur(2px);
+}
+
+.admin-app .drawer-backdrop.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Drawer của Phiếu nhập rộng hơn bình thường (650px) để chứa bảng */
+
+.admin-app .drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: min(650px, 95vw);
+    background: #fff;
+    border-left: 1px solid var(--line);
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -24px 0 60px rgba(0, 0, 0, 0.1);
+}
+
+.admin-app .drawer.open {
+    transform: translateX(0);
+}
+
+.admin-app .drawer .cardHeader {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--soft-line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+}
+
+.admin-app .drawer .drawer-body {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.admin-app .drawer .drawer-footer {
+    padding: 16px 20px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+}
+
+.admin-app .close-x {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: 800;
+    color: var(--text);
+    transition: 0.2s;
+}
+
+.admin-app .close-x:hover {
+    background: #fee2e2;
+    color: #ef4444;
+    border-color: #fecaca;
+}
+
+.admin-app .grid-3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.admin-app label.small {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 600;
+}
+
+
+/* Bảng chi tiết phiếu nhập trong form */
+
+.admin-app .inner-table table {
+    min-width: 100%;
+    border: 1px solid var(--line);
+    margin-top: 16px;
+}
+
+.admin-app .inner-table thead td {
+    padding: 10px;
+    font-size: 13px;
+}
+
+.admin-app .inner-table tbody td {
+    padding: 10px;
+    font-size: 13px;
+}
+
+.admin-app .total-box {
+    font-size: 15px;
+    color: #111;
+    display: flex;
+    gap: 20px;
+}
+
+.admin-app .total-box span {
+    color: var(--brand);
+    font-weight: 800;
+    font-size: 18px;
+}

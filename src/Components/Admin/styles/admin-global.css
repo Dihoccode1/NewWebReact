@@ -1,0 +1,148 @@
+/* src/Components/Admin/styles/admin-global.css */
+
+
+/* 1. TOKENS & RESET (Bọc trong .admin-app) */
+
+.admin-app {
+    --brand: #1f235a;
+    --brand-2: #2a2f8a;
+    --gold: #f59e0b;
+    --text: #0f172a;
+    --muted: #6b7280;
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --line: #e5e7eb;
+    --soft-line: #eef2f7;
+    --radius-lg: 14px;
+    --radius-md: 10px;
+    --radius-sm: 8px;
+    --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 16px 36px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.1);
+    --speed: 0.25s;
+    --sidebar-width: 264px;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.admin-app * {
+    box-sizing: border-box;
+}
+
+.admin-app a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.admin-app ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-app img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* 2. LAYOUT CHÍNH */
+
+.admin-app .container {
+    position: relative;
+    width: 100%;
+}
+
+.admin-app .main {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    transition: margin-left var(--speed);
+    padding: 16px;
+}
+
+
+/* 3. SIDEBAR (.navagation) */
+
+.admin-app .navagation {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: var(--sidebar-width);
+    background: #2a2185;
+    border-right: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    z-index: 20;
+    padding: 14px 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: width var(--speed), transform var(--speed);
+}
+
+.admin-app .navagation li {
+    margin: 4px 6px;
+}
+
+.admin-app .navagation a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    outline: none;
+}
+
+.admin-app .navagation a:hover {
+    transform: translateY(-1px);
+}
+
+.admin-app .navagation .icon {
+    display: inline-flex;
+    min-width: 20px;
+    font-size: 16px;
+}
+
+.admin-app .navagation .hovered>a {
+    background: #fff;
+    color: #000;
+}
+
+.admin-app .navagation .hovered>a .icon {
+    color: #000;
+}
+
+.admin-app .navagation hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 12px 10px;
+}
+
+
+/* 4. RESPONSIVE SIDEBAR */
+
+@media (max-width: 1024px) {
+    .admin-app {
+        --sidebar-width: 232px;
+    }
+}
+
+@media (max-width: 991px) {
+    .admin-app {
+        --sidebar-width: 70px;
+    }
+    .admin-app .navagation a {
+        justify-content: center;
+        padding: 12px 8px;
+    }
+    .admin-app .navagation .title {
+        display: none;
+    }
+    .admin-app #sb-admin-username,
+    .admin-app #sb-admin-role {
+        display: none;
+    }
+}
