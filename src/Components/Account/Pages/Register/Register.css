@@ -1,0 +1,49 @@
+/* src/Components/Account/Pages/Register/Register.css */
+
+@import '../Login/Login.css';
+
+/* Kế thừa toàn bộ CSS của Login */
+
+.auth-layout .wrap.reg-wrap {
+    max-width: 640px;
+}
+
+
+/* Mở rộng form đăng ký */
+
+.auth-layout .grid-2 {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .auth-layout .grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.auth-layout .check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+.auth-layout .check input {
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.auth-layout .check a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-layout .btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
