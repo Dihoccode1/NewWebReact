@@ -1,0 +1,284 @@
+/* src/Components/Products/Pages/ProductList/ProductList.css */
+
+
+/* ... (GIỮ NGUYÊN TOÀN BỘ CSS CŨ Ở PHẦN TRÊN) ... */
+
+
+/* Dán đè hoặc thêm đoạn này vào cuối file CSS */
+
+.product-list-page {
+    --bg: #fff;
+    --text: #111;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --radius: 14px;
+    --shadow-sm: 0 6px 16px rgba(17, 24, 39, 0.08);
+    --shadow-md: 0 12px 28px rgba(17, 24, 39, 0.12);
+    padding: 20px 16px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.product-list-page .breadcrumb {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding: 0 0 16px;
+    margin: 0;
+    font-size: 14px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 20px;
+}
+
+.product-list-page .breadcrumb a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.product-list-page .breadcrumb .sep {
+    color: var(--muted);
+}
+
+.product-list-page .sv-search {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 0.9fr 0.9fr 1fr auto;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 12px;
+    align-items: end;
+    background: #f8fafc;
+    border: 1px solid var(--line);
+    margin-bottom: 24px;
+}
+
+.product-list-page .sv-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product-list-page .sv-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.product-list-page .sv-field input,
+.product-list-page .sv-field select {
+    height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+.product-list-page .sv-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.product-list-page .sv-btn {
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.product-list-page .sv-btn-primary {
+    background: #111;
+    color: #fff;
+}
+
+.product-list-page .sv-btn-ghost {
+    background: #fff;
+    border-color: var(--line);
+}
+
+@media (max-width: 992px) {
+    .product-list-page .sv-search {
+        grid-template-columns: 1fr 1fr;
+    }
+    .product-list-page .sv-search .sv-field:first-child {
+        grid-column: 1 / -1;
+    }
+    .product-list-page .sv-actions {
+        grid-column: 1 / -1;
+    }
+}
+
+.product-list-page .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.product-list-page .product-box {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.product-list-page .product-box:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #d1d5db;
+    transform: translateY(-2px);
+}
+
+.product-list-page .product-thumbnail {
+    position: relative;
+    aspect-ratio: 1/1;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+.product-list-page .product-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.product-list-page .product-box:hover .product-thumbnail img {
+    transform: scale(1.05);
+}
+
+.product-list-page .product-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.product-list-page .product-label.oos {
+    background: var(--muted);
+}
+
+.product-list-page .product-action-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.product-list-page .product-box:hover .product-action-grid {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.product-list-page .btn-cart {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.product-list-page .product-info {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+}
+
+.product-list-page .product-name {
+    font-size: 15px;
+    margin: 0 0 8px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-list-page .price-box {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: baseline;
+    margin-top: auto;
+}
+
+.product-list-page .product-price {
+    color: #ef4444;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.product-list-page .product-price-old {
+    color: var(--muted);
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   THÊM MỚI: CSS PHÂN TRANG (PAGINATION)
+   ========================================= */
+
+.product-list-page .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.product-list-page .page-btn {
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--text);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.product-list-page .page-btn:hover:not(:disabled) {
+    background: #f8fafc;
+    border-color: #d1d5db;
+}
+
+.product-list-page .page-btn.active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+.product-list-page .page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}

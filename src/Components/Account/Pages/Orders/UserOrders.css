@@ -1,0 +1,128 @@
+/* src/Components/Account/Pages/Orders/UserOrders.css */
+
+.user-orders-page {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111827;
+}
+
+.user-orders-page h3 {
+    margin: 0 0 20px;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.user-orders-page .order-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.user-orders-page .card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.user-orders-page .card-header-flex h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.user-orders-page .badge {
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.user-orders-page .badge.bg-secondary {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.user-orders-page .badge.bg-warning {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.user-orders-page .badge.bg-success {
+    background: #d1fae5;
+    color: #059669;
+}
+
+.user-orders-page .badge.bg-danger {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.user-orders-page .text-muted {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+
+/* Danh sách mặt hàng */
+
+.user-orders-page .list-group {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.user-orders-page .list-group-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    background: #fafafa;
+}
+
+.user-orders-page .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.user-orders-page .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.user-orders-page .summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.user-orders-page .btn-cancel {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #fecaca;
+    background: #fff;
+    color: #dc2626;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.user-orders-page .btn-cancel:hover {
+    background: #fee2e2;
+}
