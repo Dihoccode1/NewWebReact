@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 // Frontend
 import About from "./Components/About/About";
+import HomePage from "./Components/Home/HomePage"
 
 // Admin Layout & Pages
 
@@ -31,7 +32,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/admin" replace />} />
+       <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
 
         {/* ADMIN ROUTES */}
